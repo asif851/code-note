@@ -1,2 +1,10 @@
+#import modules
 import pandas as pd
+
+#import dataset
 df=pd.read_csv("dataset-name")
+
+#show dataset
+df.head()
+df.tail()
+df.head(10)
