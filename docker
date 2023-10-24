@@ -1,0 +1,27 @@
+# Use an official Python runtime as the base image
+FROM python:3.8-slim
+
+# Set the working directory inside the container
+WORKDIR /app
+
+# Copy the current directory contents into the container at /app
+COPY . /app
+
+# Install any necessary dependencies
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Specify the command to run on container startup
+CMD ["python", "app.py"]
+
+
+
+
+#To build the Docker image
+docker build -t simple-python-app .
+
+
+
+#After the image is built,run a container using
+docker run -it simple-python-app
+
+
